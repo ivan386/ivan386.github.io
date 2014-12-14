@@ -1,0 +1,3 @@
+[submodule "magnet-converter"]
+	path = magnet-converter
+	url = https://github.com/ivan386/magnet-converter.git
