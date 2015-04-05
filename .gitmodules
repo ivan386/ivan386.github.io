@@ -4,3 +4,6 @@
 [submodule "gravity"]
 	path = gravity
 	url = https://github.com/ivan386/gravity.git
+[submodule "vkontakte-music"]
+	path = vkontakte-music
+	url = https://github.com/ivan386/vkontakte-music
