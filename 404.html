@@ -14,6 +14,10 @@ if (window.location.hash.substr(1,8) == "magnet:?"){
 	var magnet = document.location.hash.substr(9);
 	window.location.replace("https://ivan386.github.io/magnet-converter/magnet-converter.htm#magnet:?"+magnet);
 }
+
+if (window.location.pathname="/magnet-maker-online.htm"){
+	window.location.pathname = "/magnet-converter/magnet-converter.htm"
+}
 </script>
 
 <h1>page not found 404</h1>
