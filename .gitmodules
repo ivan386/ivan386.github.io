@@ -7,3 +7,6 @@
 [submodule "vkontakte-music"]
 	path = vkontakte-music
 	url = https://github.com/ivan386/vkontakte-music
+[submodule "magnet-uri-logo"]
+	path = magnet-uri-logo
+	url = https://github.com/ivan386/magnet-uri-logo.git
