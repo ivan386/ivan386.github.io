@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # Версия 1.1
-magnet
+magnet:
 
 FALLBACK:
 / 404.html
