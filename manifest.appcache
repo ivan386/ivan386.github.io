@@ -5,8 +5,9 @@ magnet/
 magnet
 magnet:
 
+NETWORK
+*
+
 FALLBACK:
 / 404.html
 
-NETWORK
-*
