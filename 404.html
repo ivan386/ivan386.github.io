@@ -9,16 +9,16 @@
 <script>
 var url = window.location.toString(); 
 if (url.indexOf("/magnet:?") > 0) 
-	window.location.replace(url.replace("/magnet:?","#magnet:?"));
+	history.replaceState("","",url.replace("/magnet:?","/#magnet:?"));
 	
 if (url.indexOf("/magnet/?") > 0) 
-	window.location.replace(url.replace("/magnet/?","#magnet:?"));
+	history.replaceState("","",url.replace("/magnet/?","/#magnet:?"));
 
 if (url.indexOf("/magnet?") > 0) 
-	window.location.replace(url.replace("/magnet?","#magnet:?"));
+	history.replaceState("","",url.replace("/magnet?","/#magnet:?"));
 	
 if (window.location.hash.substr(1,8) == "magnet:?" || window.location.pathname == "/magnet-maker-online.htm"){
-	window.location.pathname = "/magnet-converter/magnet-converter.htm"
+	window.location.pathname += "magnet-converter/"
 }
 
 if (window.location.pathname.substr(0,5) == "/help")
