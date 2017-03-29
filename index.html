@@ -1,18 +1,26 @@
 <!doctype html>
+<!-- Используем относительный путь в manifest -->
 <html manifest="manifest.appcache">
 	<head>
 		<meta charset="utf-8" />
 		<meta name='yandex-verification' content='61f6c0b949404cb6' />
+		<title>Мой сайт</title>
 		<script>
 			if (window.location.hash.substr(1,8) == "magnet:?"){
 				var magnet = document.location.hash.substr(9)
+				// Используем относительный путь в скриптах
 				setTimeout(function() {window.location.replace("magnet-converter/#magnet:?"+magnet);}, 0);
 			}
 		</script>
 	</head>
 	<body>
+		<!-- Используем относительные пути в href -->
 		<a href="magnet-converter/">magnet converter</a>
 		<a href="gravity/gravity.svg">gravity</a>
+		
 		<a href="https://github.com/ivan386?tab=repositories">All projects</a>
+		
+		<!-- Используем относительные пути в src -->
+		<img src="imgs/stars-static.svg" style="display: block; width: 100%" />
 	</body>
 </html>
