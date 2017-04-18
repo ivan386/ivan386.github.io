@@ -9,19 +9,24 @@
 <script>
 var url = window.location.toString(); 
 if (url.indexOf("/magnet:?") > 0) 
-	history.replaceState("","",url.replace("/magnet:?","/#magnet:?"));
+	window.location.replace(url.replace("/magnet:?","/#magnet:?"));
 	
 if (url.indexOf("/magnet/?") > 0) 
-	history.replaceState("","",url.replace("/magnet/?","/#magnet:?"));
+	window.location.replace(url.replace("/magnet/?","/#magnet:?"));
 
 if (url.indexOf("/magnet?") > 0) 
-	history.replaceState("","",url.replace("/magnet?","/#magnet:?"));
-	
-if (window.location.hash.substr(1,8) == "magnet:?" || window.location.pathname == "/magnet-maker-online.htm"){
-	window.location.pathname += "magnet-converter/"
-}
+	window.location.replace(url.replace("/magnet?","/#magnet:?"));
 
-if (window.location.pathname.substr(0,5) == "/help")
+var pathname = document.location.pathname;
+
+if ( pathname.substr(-18) != "/magnet-converter/" 
+	 && window.location.hash.substr(1,8) == "magnet:?")
+	window.location.pathname = pathname.substr(0, pathname.lastIndexOf("/") + 1) + "magnet-converter/";
+
+if ( pathname.substr(-24) == "/magnet-maker-online.htm" )
+	window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
+
+if (pathname.substr(0,5) == "/help")
 	window.location.host = "shareaza.sourceforge.net";
 	
 </script>
