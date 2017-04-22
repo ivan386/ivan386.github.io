@@ -26,6 +26,9 @@ if ( pathname.substr(-18) != "/magnet-converter/"
 if ( pathname.substr(-24) == "/magnet-maker-online.htm" )
 	window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
 
+if ( pathname.substr(-29) == "/share/MegaMagDriveV0.8.2.zip" )	
+	window.location.replace("https://ipfs.io/ipfs/QmZ7shSSqBRK7ojh6qHK75mapAbCdmEtA3E2KRVF26YgYi/MegaMagDriveV0.8.2.zip");
+	
 if (pathname.substr(0,5) == "/help")
 	window.location.host = "shareaza.sourceforge.net";
 	
