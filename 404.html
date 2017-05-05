@@ -1,0 +1,41 @@
+<!doctype html>
+<html manifest="manifest.appcache">
+<head>
+<meta charset="utf-8" />
+ <meta http-equiv="refresh" content="5; url=https://ivan386.github.io"/>
+<title>page not found 404</title>
+</head>
+<body>
+<script>
+var url = window.location.toString(); 
+if (url.indexOf("/magnet:?") > 0) 
+	window.location.replace(url.replace("/magnet:?","/#magnet:?"));
+	
+if (url.indexOf("/magnet/?") > 0) 
+	window.location.replace(url.replace("/magnet/?","/#magnet:?"));
+
+if (url.indexOf("/magnet?") > 0) 
+	window.location.replace(url.replace("/magnet?","/#magnet:?"));
+
+var pathname = document.location.pathname;
+
+if ( pathname.substr(-18) != "/magnet-converter/" 
+	 && window.location.hash.substr(1,8) == "magnet:?")
+	window.location.pathname = pathname.substr(0, pathname.lastIndexOf("/") + 1) + "magnet-converter/";
+
+if ( pathname.substr(-24) == "/magnet-maker-online.htm" )
+	window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
+
+if ( pathname.substr(-29) == "/share/MegaMagDriveV0.8.2.zip" )	
+	window.location.replace("https://ipfs.io/ipfs/QmZ7shSSqBRK7ojh6qHK75mapAbCdmEtA3E2KRVF26YgYi/MegaMagDriveV0.8.2.zip");
+	
+if (pathname.substr(0,5) == "/help")
+	window.location.host = "shareaza.sourceforge.net";
+	
+</script>
+
+<h1>page not found 404</h1>
+go to:<a href="https://ivan386.github.io">https://ivan386.github.io/</a>
+<!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34517160 = new Ya.Metrika({ id:34517160, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true, ut:"noindex" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/34517160?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+</html>

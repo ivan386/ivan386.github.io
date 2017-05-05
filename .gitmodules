@@ -6,4 +6,7 @@
 	url = https://github.com/ivan386/gravity.git
 [submodule "vkontakte-music"]
 	path = vkontakte-music
-	url = https://github.com/ivan386/vkontakte-music
+	url = https://github.com/ivan386/vkontakte-music.git
+[submodule "magnet-uri-logo"]
+	path = magnet-uri-logo
+	url = https://github.com/ivan386/magnet-uri-logo.git
