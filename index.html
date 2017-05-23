@@ -6,10 +6,18 @@
 		<meta name='yandex-verification' content='61f6c0b949404cb6' />
 		<title>Мой сайт</title>
 		<script>
-			if (window.location.hash.substr(1,8) == "magnet:?"){
-				var magnet = document.location.hash.substr(9)
+			if (window.location.hash.substr(1,6) == "magnet"){
+                var magnet;
+                if ( window.location.hash.substr(7,1) == "?" )
+                    magnet = document.location.hash.substr(8);
+				if ( window.location.hash.substr(7,2) == ":?" )
+					magnet = document.location.hash.substr(9);
+					
 				// Используем относительный путь в скриптах
-				setTimeout(function() {window.location.replace("magnet-converter/#magnet:?"+magnet);}, 0);
+                if ( magnet )
+                    setTimeout(function() {
+                        window.location.replace("magnet-converter/#magnet:?"+magnet);
+                    }, 0);
 			}
 		</script>
 	</head>
