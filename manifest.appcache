@@ -1,9 +1,10 @@
 CACHE MANIFEST
-# 2017-06-21 v1.0
+# 2017-07-31 v1.0
 
 # Записываем в кеш 404.html
 CACHE:
 404.html
+redirect_to_ipfs_gateway.js
 
 # Назначаем её ответом в случае получения 404 от сервера
 FALLBACK:
