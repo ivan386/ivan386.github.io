@@ -1,1 +1,7 @@
-<script>window.location.replace(window.location.toString().replace("/magnet/","#magnet:"))</script>
+<script>
+var url = window.location.toString()
+if (url.indexOf("/magnet/?") > 0)
+	window.location.replace(url.replace("/magnet/","#magnet:"))
+if (url.indexOf("/magnet:/?") > 0)
+	window.location.replace(url.replace("/magnet:/","#magnet:"))
+</script>

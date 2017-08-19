@@ -4,14 +4,26 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name='yandex-verification' content='61f6c0b949404cb6' />
+		<base target="_top">
 		<title>Мой сайт</title>
 		<script>
-			if (window.location.hash.substr(1,8) == "magnet:?"){
-				var magnet = document.location.hash.substr(9)
+			if (window.location.hash.substr(1,6) == "magnet"){
+                var magnet;
+                if ( window.location.hash.substr(7,1) == "?" )
+                    magnet = document.location.hash.substr(8);
+				if ( window.location.hash.substr(7,2) == ":?" )
+					magnet = document.location.hash.substr(9);
+					
 				// Используем относительный путь в скриптах
-				setTimeout(function() {window.location.replace("magnet-converter/#magnet:?"+magnet);}, 0);
+                if ( magnet )
+                    setTimeout(function() {
+                        window.location.replace("magnet-converter/#magnet:?"+magnet);
+                    }, 0);
 			}
 		</script>
+		<style>
+			.gatewaylink{display: none}
+		</style>
 	</head>
 	<body>
 		<!-- Используем относительные пути в href -->
@@ -27,5 +39,31 @@
 		
 		<!-- Используем относительные пути в src -->
 		<img src="imgs/stars-static.svg" style="display: block; width: 100%" />
+		
+		<script src="redirect_to_ipfs_gateway.js" defer async ></script>
+		<link rel="stylesheet" href="http://l.ivan386.tk:8080/httpl.css" 
+		 integrity="sha384-NUvIs74OWHVFIn6HzCCmHmHXujqwq8qAUbcxJfL0g8hkGJwJ+m2EE4jiFWEYiUXG" 
+		 crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://l.ivan386.tk:8443/httpsl.css" 
+		 integrity="sha384-cMKNTNnjdC6iiQplveZnfbxy5/mflFcBHVcnMr2xyhCsPLhfVYok7n4atHKo9nDP" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://127.0.0.1:8443/ipns/ivan386.tk/https127.css" 
+		 integrity="sha384-1ubE5mA0DJuDwNaN3IJk0/ZIRIzmrDsFJmpnG4drR+6LCVjvJuWrIT1hUMzuA50g" 
+		 crossorigin="anonymous" />
+		<link rel="stylesheet" href="http://127.0.0.1:8080/ipns/ivan386.tk/http127.css" 
+		 integrity="sha384-1U+V3BTyRJfradq4jgoibEFqQkxV+o/Kt/rZbqC0ln4YMsLXDSy5V+iQXghU25IM" 
+		 crossorigin="anonymous" />
+		This site hosted in <a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System">InterPlanetary File System (IPFS)</a>
+		<div class="gatewaylink httpsl">
+			Use your gateway: <a href="https://l.ivan386.tk:8443/">https://l.ivan386.tk:8443/</a> 
+		</div>
+		<div class="gatewaylink httpl">
+			Use your gateway: <a href="http://l.ivan386.tk:8080/">http://l.ivan386.tk:8080/</a> 
+		</div>
+		<div class="gatewaylink http127">
+			Use your gateway: <a href="http://127.0.0.1:8080/ipns/ivan386.tk/">http://127.0.0.1:8080/ipns/ivan386.tk/</a> 
+		</div>
+		<div class="gatewaylink https127">
+			Use your gateway: <a href="https://127.0.0.1:8443/ipns/ivan386.tk/">https://127.0.0.1:8443/ipns/ivan386.tk/</a> 
+		</div>
 	</body>
 </html>
