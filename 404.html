@@ -17,6 +17,11 @@ if (url.indexOf("/magnet/?") > 0)
 if (url.indexOf("/magnet?") > 0) 
 	window.location.replace(url.replace("/magnet?","/#magnet:?"));
 
+var magnet = url.indexOf("magnet:?");
+
+if ( magnet > 0 )
+	window.location.replace("/#"+url.substr(magnet));
+
 var pathname = document.location.pathname;
 
 if ( pathname.substr(-18) != "/magnet-converter/" 
