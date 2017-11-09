@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="1000" height="340" viewBox="0,0,1000,340">
+<style>
+	<![CDATA[
+		.pices{
+			stroke: rgba(0,0,255,0.5);
+			stroke-width: 60;
+			pointer-events: none;
+		}
+		rect{
+			position: relative;
+			z-index: 1;
+			fill: transparent;
+		}
+	]]>
+</style>
+
+
+
+
+
+<path d="M0,30h1000"  class="pices" stroke-dasharray="20,10,10,20,20,80,30,30,10,20,50,10,10,30,30,10,10,10,10,20,10,40,10,10,10,10,10,10,20,10,10,30,10,10,10,10,30,10,10,20,30,20,20,10,20,10,10,10,20,10,30,10,10,10,20,20,10">
+<animate attributeName="d" values="M0,30h1000;M0,170h1000;M0,170h1000;M0,30h1000"  dur="10s" ></animate>
+</path>
+<path d="M0,100h1000"  class="pices" stroke-dasharray="0,20,20,10,20,20,10,50,10,20,30,10,20,30,10,10,20,10,10,30,30,10,10,10,40,20,50,10,10,10,10,10,10,20,60,40,10,10,10,20,10,20,10,10,10,20,10,10,20,20,10,10,10,20,20,20,10">
+<animate attributeName="d" values="M0,100h1000;M0,170h1000;M0,170h1000;M0,100h1000" keyTimes="0;0.1;0.9;1"  dur="10s" ></animate>
+</path>
+<path d="M0,170h1000"  class="pices" stroke-dasharray="50,40,10,20,20,20,10,30,40,30,40,20,20,30,20,30,10,50,10,10,30,20,30,10,10,10,40,10,30,10,30,30,30,20,10,10,10,20,10,20,10,30,10,20,20,10">
+
+</path>
+<path d="M0,240h1000"  class="pices" stroke-dasharray="10,20,10,20,10,10,60,20,10,10,20,20,10,20,30,10,20,30,40,40,10,10,30,10,10,60,40,40,30,10,20,10,10,30,40,10,30,10,30,80,10,20,10,10,10">
+<animate attributeName="d" values="M0,240h1000;M0,170h1000;M0,170h1000;M0,240h1000" keyTimes="0;0.1;0.9;1"  dur="10s" ></animate>
+</path>
+<path d="M0,310h1000"  class="pices" stroke-dasharray="10,20,10,10,10,20,40,10,30,10,10,30,10,20,30,10,10,10,10,10,10,10,20,20,20,10,10,30,40,50,20,20,20,10,20,20,20,20,20,20,20,30,10,10,10,30,30,10,10,10,10,20,30,20,10,10">
+<animate attributeName="d" values="M0,310h1000;M0,170h1000;M0,170h1000;M0,310h1000"  dur="10s" ></animate>
+</path>
+<rect onclick="fill_values()" x="0" y="140" width="1000" height="60" stroke="black" stroke-width="2"  />
+<foreignObject  class="node" x="0" y="0" width="1000" height="100">
+	<body xmlns="http://www.w3.org/1999/xhtml" style="margin: 0;paddng: 0">
+		<div id="text"></div>
+	</body>
+</foreignObject>
+
+
+<script>
+<![CDATA[
+	console.log("start")
+	function make_value( max_count, percent )
+	{
+		var blocks_map = [];
+		for (var selected_count = 0; selected_count < Math.ceil( max_count * percent ) ; selected_count++)
+		{
+			var random_block = Math.floor( Math.random() * max_count )
+			
+			for (; blocks_map[ random_block ];)
+			{
+				if ( random_block >= max_count - random_block )
+					random_block = Math.floor( Math.random() * random_block );
+				else
+					random_block = random_block + 1 + Math.ceil( Math.random() * ( max_count - random_block - 1 ) );
+			}
+			
+			blocks_map[ random_block ] = 1;
+		}
+		
+		var empty = blocks_map[0];
+		var count = 0;
+		var ranges = [];
+		var full_ranges = [];
+
+		if ( empty )
+			ranges.push(0);
+		
+		for (var i = 0; i <= max_count; i++)
+		{
+			if ( count )
+			{
+				if ( empty != blocks_map[i] || i == max_count )
+				{
+					ranges.push(count * 1000 / max_count);
+					count = 0;
+					empty = blocks_map[i];
+				}
+			}
+			count++;
+		}
+		return [ranges.join(","), blocks_map[0]] ;
+	}
+
+	function fill_values()
+	{
+		var path = document.getElementsByClassName("pices");
+		for ( i = 0; i < path.length; i++)
+		{
+			var value = make_value( 100, 0.5 );
+			path[i].setAttribute("stroke-dasharray", value[0]);
+			if(path[i].firstElementChild)
+			{
+				path[i].firstElementChild.beginElement();
+			}
+		}
+	}
+
+]]>
+</script>
+</svg>
