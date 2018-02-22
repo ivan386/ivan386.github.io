@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="1000" height="340" viewBox="0,0,1000,340">
+<style>
+	<![CDATA[
+		.pices{
+			stroke: rgb(0,0,255);
+			stroke-width: 60;
+			pointer-events: none;
+		}
+		rect{
+			position: relative;
+			z-index: 1;
+			fill: transparent;
+		}
+		#info{
+			fill: white;
+			font-size: 1.1em;
+		}
+	]]>
+</style>
+
+<path d="M0,30h1000" class="pices" stroke-dasharray="10,10,20,10,10,10,80,10,10,20,10,10,10,10,70,20,40,20,40,10,20,10,80,10,10,10,10,20,20,10,40,10,10,10,10,10,60,10,10,10,40,40,10,10,20,10,40,10,10">
+</path>
+
+<path style="stroke: black; stroke-width: 10;" class="graph" d="M575,60v2M585,60v5M595,60v14M605,60v31M615,60v58M625,60v101M635,60v155M645,60v202M655,60v252M665,60v280M675,60v274M685,60v235M695,60v183M705,60v129M715,60v73M725,60v39M735,60v19M745,60v8M755,60v2">
+</path> 
+
+<path style="stroke: rgba(128,128,128,0.5); stroke-width: 10;" id="block_graph" d="M5,60v276M15,60v277M25,60v276M35,60v277M45,60v276M55,60v278M65,60v276M75,60v276M85,60v276M95,60v276M105,60v276M115,60v276M125,60v277M135,60v276M145,60v277M155,60v277M165,60v278M175,60v276M185,60v277M195,60v276M205,60v276M215,60v277M225,60v277M235,60v277M245,60v277M255,60v277M265,60v277M275,60v273M285,60v276M295,60v276M305,60v277M315,60v276M325,60v276M335,60v277M345,60v278M355,60v276M365,60v276M375,60v277M385,60v277M395,60v276M405,60v275M415,60v277M425,60v275M435,60v276M445,60v277M455,60v275M465,60v276M475,60v277M485,60v276M495,60v276M505,60v276M515,60v276M525,60v278M535,60v277M545,60v277M555,60v275M565,60v276M575,60v277M585,60v276M595,60v280M605,60v276M615,60v277M625,60v276M635,60v276M645,60v275M655,60v279M665,60v275M675,60v278M685,60v278M695,60v278M705,60v276M715,60v277M725,60v278M735,60v279M745,60v276M755,60v278M765,60v276M775,60v277M785,60v276M795,60v278M805,60v277M815,60v276M825,60v275M835,60v276M845,60v277M855,60v278M865,60v276M875,60v275M885,60v277M895,60v277M905,60v275M915,60v278M925,60v278M935,60v276M945,60v277M955,60v276M965,60v277M975,60v276M985,60v277M995,60v277">
+</path>
+
+<path d="M0,30h1000" style="stroke: black; stroke-width: 60;" stroke-dasharray="0,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9">
+</path>
+
+<rect onclick="clear_statistic(); fill_values(event ? event.clientX : 0)" x="0" y="0" width="999" height="60" stroke="black" stroke-width="2"/>
+<text id="info" x="0" y="80">0%</text>
+<text id="info" x="570" y="80">57%</text>
+<text id="info" x="670" y="336">67%</text>
+<text id="info" x="750" y="80">75%</text>
+<text id="info" x="960" y="80">100%</text>
+<text id="info" x="450" y="80">└ sparse</text>
+<text id="info" x="280" y="80">└ data</text>
+<text id="info" x="620" y="80">avaliable data</text>
+<text id="info" x="0" y="100" style="fill: green">sources: 5</text>
+<text id="info" x="0" y="120" style="fill: green">data: 67% avaliable / 80% clear</text>
+<text id="info" x="0" y="330">distribution of pieces</text>
+</svg>
