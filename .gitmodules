@@ -10,3 +10,6 @@
 [submodule "magnet-uri-logo"]
 	path = magnet-uri-logo
 	url = https://github.com/ivan386/magnet-uri-logo.git
+[submodule "sparse_light"]
+	path = sparse_light
+	url = https://github.com/ivan386/sparse_light.git

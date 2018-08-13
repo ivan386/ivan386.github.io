@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" baseProfile="full" width="1000" height="340">
+  <style>
+    #info{fill:#fff;font-size:1.1em}
+  </style>
+  <path d="M0 30h1000" stroke-dasharray="10 20 20 10 10 10 50 20 40 10 10 10 20 20 60 10 60 10 10 20 40 20 30 10 20 50 40 10 40 10 10 10 20 10 20 10 10 20 20 20 40 30 40 10 30" stroke="#00f" stroke-width="60" pointer-events="none"/>
+  <path class="graph" d="M575 60v2m10 3v-5m10 0v14m10 18V60m10 0v56m10 41V60m10 0v144m10 63V60m10 0v249m10 31V60m10 0v267m10-35V60m10 0v169m10-50V60m10 0v74m10-34V60m10 0v20m10-12v-8m10 0v3m10-2v-1" stroke="#000" stroke-width="10"/>
+  <path id="block_graph" d="M5 60v277m10 1V60m10 0v278m10 1V60m10 0v277m10 0V60m10 0v275m10 5V60m10 0v279m10 0V60m10 0v277m10 0V60m10 0v278m10-2V60m10 0v277m10-1V60m10 0v279m10-1V60m10 0v278m10-1V60m10 0v280m10-2V60m10 0v277m10 1V60m10 0v277m10 2V60m10 0v278m10 1V60m10 0v277m10 1V60m10 0v277m10-2V60m10 0v278m10 2V60m10 0v276m10 3V60m10 0v275m10 1V60m10 0v278m10-1V60m10 0v276m10 3V60m10 0v278m10-1V60m10 0v275m10 3V60m10 0v279m10-4V60m10 0v275m10 2V60m10 0v277m10 0V60m10 0v276m10 3V60m10 0v278m10 0V60m10 0v275m10 0V60m10 0v277m10-1V60m10 0v278m10 1V60m10 0v278m10 1V60m10 0v278m10-1V60m10 0v276m10 2V60m10 0v278m10 0V60m10 0v279m10-2V60m10 0v279m10-2V60m10 0v278m10-2V60m10 0v276m10 4V60m10 0v276m10 1V60m10 0v277m10 1V60m10 0v279m10-2V60m10 0v278m10-2V60m10 0v276m10-1V60m10 0v278m10-2V60m10 0v276m10 1V60m10 0v278m10-2V60m10 0v278m10-2V60m10 0v279m10-3V60m10 0v278m10 1V60" stroke="rgba(128,128,128,.5)" stroke-width="10"/>
+  <path d="M0 30h1000" stroke-dasharray="0 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9 1 9" stroke="#000" stroke-width="60"/>
+  <path onclick="clear_statistic(); fill_values(event ? event.clientX : 0)" stroke="#000" stroke-width="2" style="position:relative;z-index:1" fill="transparent" d="M0 0h999v60H0z"/>
+  <text id="info" y="80">
+    0%
+  </text>
+  <text id="info" x="570" y="80">
+    57%
+  </text>
+  <text id="info" x="660" y="336">
+    66% (max 3311)
+  </text>
+  <text id="info" x="750" y="80">
+    75%
+  </text>
+  <text id="info" x="960" y="80">
+    100%
+  </text>
+  <text id="info" x="470" y="80">
+    └ sparse
+  </text>
+  <text id="info" x="280" y="80">
+    └ data
+  </text>
+  <text id="info" x="620" y="80">
+    avaliable data
+  </text>
+  <text id="info" y="100" fill="green">
+    sources: 5
+  </text>
+  <text id="info" y="120" fill="green">
+    data: 67% avaliable / 80% clear
+  </text>
+  <text id="info" y="140" fill="green">
+    cycle: 23900
+  </text>
+  <text id="info" y="330">
+    distribution of pieces: 16218 max
+  </text>
+</svg>

@@ -14,32 +14,29 @@
 	]]>
 </style>
 
-
-
-
-
 <path d="M0,30h1000"  class="pices" stroke-dasharray="20,10,10,20,20,80,30,30,10,20,50,10,10,30,30,10,10,10,10,20,10,40,10,10,10,10,10,10,20,10,10,30,10,10,10,10,30,10,10,20,30,20,20,10,20,10,10,10,20,10,30,10,10,10,20,20,10">
 <animate attributeName="d" values="M0,30h1000;M0,170h1000;M0,170h1000;M0,30h1000"  dur="10s" ></animate>
 </path>
+
 <path d="M0,100h1000"  class="pices" stroke-dasharray="0,20,20,10,20,20,10,50,10,20,30,10,20,30,10,10,20,10,10,30,30,10,10,10,40,20,50,10,10,10,10,10,10,20,60,40,10,10,10,20,10,20,10,10,10,20,10,10,20,20,10,10,10,20,20,20,10">
 <animate attributeName="d" values="M0,100h1000;M0,170h1000;M0,170h1000;M0,100h1000" keyTimes="0;0.1;0.9;1"  dur="10s" ></animate>
 </path>
-<path d="M0,170h1000"  class="pices" stroke-dasharray="50,40,10,20,20,20,10,30,40,30,40,20,20,30,20,30,10,50,10,10,30,20,30,10,10,10,40,10,30,10,30,30,30,20,10,10,10,20,10,20,10,30,10,20,20,10">
 
-</path>
 <path d="M0,240h1000"  class="pices" stroke-dasharray="10,20,10,20,10,10,60,20,10,10,20,20,10,20,30,10,20,30,40,40,10,10,30,10,10,60,40,40,30,10,20,10,10,30,40,10,30,10,30,80,10,20,10,10,10">
 <animate attributeName="d" values="M0,240h1000;M0,170h1000;M0,170h1000;M0,240h1000" keyTimes="0;0.1;0.9;1"  dur="10s" ></animate>
 </path>
+
 <path d="M0,310h1000"  class="pices" stroke-dasharray="10,20,10,10,10,20,40,10,30,10,10,30,10,20,30,10,10,10,10,10,10,10,20,20,20,10,10,30,40,50,20,20,20,10,20,20,20,20,20,20,20,30,10,10,10,30,30,10,10,10,10,20,30,20,10,10">
 <animate attributeName="d" values="M0,310h1000;M0,170h1000;M0,170h1000;M0,310h1000"  dur="10s" ></animate>
 </path>
-<rect onclick="fill_values()" x="0" y="140" width="1000" height="60" stroke="black" stroke-width="2"  />
-<foreignObject  class="node" x="0" y="0" width="1000" height="100">
-	<body xmlns="http://www.w3.org/1999/xhtml" style="margin: 0;paddng: 0">
-		<div id="text"></div>
-	</body>
-</foreignObject>
 
+<path d="M0,170h1000"  class="pices" stroke-dasharray="50,40,10,20,20,20,10,30,40,30,40,20,20,30,20,30,10,50,10,10,30,20,30,10,10,10,40,10,30,10,30,30,30,20,10,10,10,20,10,20,10,30,10,20,20,10">
+</path>
+
+<path d="M0,170h1000"  style="stroke: black; stroke-width: 60;" stroke-dasharray="0,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9">
+</path>
+
+<rect onclick="fill_values(event ? event.clientX : 0)" x="0" y="140" width="1000" height="60" stroke="black" stroke-width="2"  />
 
 <script>
 <![CDATA[
@@ -52,12 +49,7 @@
 			var random_block = Math.floor( Math.random() * max_count )
 			
 			for (; blocks_map[ random_block ];)
-			{
-				if ( random_block >= max_count - random_block )
-					random_block = Math.floor( Math.random() * random_block );
-				else
-					random_block = random_block + 1 + Math.ceil( Math.random() * ( max_count - random_block - 1 ) );
-			}
+				random_block = Math.floor( Math.random() * max_count );
 			
 			blocks_map[ random_block ] = 1;
 		}
@@ -86,12 +78,13 @@
 		return [ranges.join(","), blocks_map[0]] ;
 	}
 
-	function fill_values()
+	function fill_values(x)
 	{
+		if (!x) x = 500;
 		var path = document.getElementsByClassName("pices");
 		for ( i = 0; i < path.length; i++)
 		{
-			var value = make_value( 100, 0.5 );
+			var value = make_value( 100, x / 1000 );
 			path[i].setAttribute("stroke-dasharray", value[0]);
 			if(path[i].firstElementChild)
 			{
