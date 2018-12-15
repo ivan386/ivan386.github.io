@@ -13,3 +13,6 @@
 [submodule "sparse_light"]
 	path = sparse_light
 	url = https://github.com/ivan386/sparse_light.git
+[submodule "wrap"]
+	path = wrap
+	url = https://github.com/ivan386/js-ipfs-wrap-with-directory.git
