@@ -24,26 +24,26 @@ if ( magnet > 0 )
 
 var pathname = document.location.pathname;
 
-if ( pathname.substr(-18) != "/magnet-converter/" 
-	 && window.location.hash.substr(1,8) == "magnet:?")
-	window.location.pathname = pathname.substr(0, pathname.lastIndexOf("/") + 1) + "magnet-converter/";
+if ( ( pathname.length < 18 || pathname.indexOf("/magnet-converter/") != pathname.length - 18 )
+	 && window.location.hash.indexOf("magnet:?") == 1 )
+	window.location.pathname = "/";
 
-if ( pathname.substr(-24) == "/magnet-maker-online.htm" )
+if ( pathname.length >= 24 && pathname.indexOf("/magnet-maker-online.htm") == pathname.length - 24  )
 	window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
 
-if ( pathname.substr(-29) == "/share/MegaMagDriveV0.8.2.zip" )	
+if ( pathname == "/share/MegaMagDriveV0.8.2.zip" )	
 	window.location.replace("https://ipfs.io/ipfs/z6S3Z3W1zuLvXBZM7eaFjBSJi1BxkqH56NTaXxtsSBetcr5jxzbRN3hdJ533TuwWy1tuHSSp2NkVh2Ev2bSdRsqz1PJqbLtjgJrk/MegaMagDriveV0.8.2.zip");
 	
-if (pathname.substr(0,5) == "/help")
+if (pathname.indexOf("/help") == 0)
 	window.location.host = "shareaza.sourceforge.net";
 	
-if (pathname.substr(0,5) == "/ipfs")
+if (pathname.indexOf("/ipfs") == 0)
 	window.location.host = "gateway.ipfs.io";
 	
 </script>
 
 <h1>page not found 404</h1>
 go to:<a href="https://ivan386.github.io">https://ivan386.github.io/</a>
-<!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34517160 = new Ya.Metrika({ id:34517160, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true, ut:"noindex" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/34517160?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34517160 = new Ya.Metrika({ id:34517160, trackLinks:true, accurateTrackBounce:true, trackHash:true, ut:"noindex" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/34517160?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 </body>
 </html>
