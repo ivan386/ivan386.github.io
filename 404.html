@@ -11,35 +11,39 @@ var url = window.location.toString();
 if (url.indexOf("/magnet:?") > 0) 
 	window.location.replace(url.replace("/magnet:?","/#magnet:?"));
 	
-if (url.indexOf("/magnet/?") > 0) 
+else if (url.indexOf("/magnet/?") > 0) 
 	window.location.replace(url.replace("/magnet/?","/#magnet:?"));
 
-if (url.indexOf("/magnet?") > 0) 
+else if (url.indexOf("/magnet?") > 0) 
 	window.location.replace(url.replace("/magnet?","/#magnet:?"));
-
-var magnet = url.indexOf("magnet:?");
-
-if ( magnet > 0 )
-	window.location.replace("/#"+url.substr(magnet));
-
-var pathname = document.location.pathname;
-
-if ( ( pathname.length < 18 || pathname.indexOf("/magnet-converter/") != pathname.length - 18 )
-	 && window.location.hash.indexOf("magnet:?") == 1 )
-	window.location.pathname = "/";
-
-if ( pathname.length >= 24 && pathname.indexOf("/magnet-maker-online.htm") == pathname.length - 24  )
-	window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
-
-if ( pathname == "/share/MegaMagDriveV0.8.2.zip" )	
-	window.location.replace("https://ipfs.io/ipfs/z6S3Z3W1zuLvXBZM7eaFjBSJi1BxkqH56NTaXxtsSBetcr5jxzbRN3hdJ533TuwWy1tuHSSp2NkVh2Ev2bSdRsqz1PJqbLtjgJrk/MegaMagDriveV0.8.2.zip");
 	
-if (pathname.indexOf("/help") == 0)
-	window.location.host = "shareaza.sourceforge.net";
-	
-if (pathname.indexOf("/ipfs") == 0)
-	window.location.host = "gateway.ipfs.io";
-	
+else
+{
+	var magnet = url.indexOf("magnet:?");
+
+	if ( magnet > 0 )
+		window.location.replace("/#"+url.substr(magnet));
+	else
+	{
+		var pathname = document.location.pathname;
+
+		if ( ( pathname.length < 18 || pathname.indexOf("/magnet-converter/") != pathname.length - 18 )
+			 && window.location.hash.indexOf("magnet:?") == 1 )
+			window.location.pathname = "/";
+
+		else if ( pathname.length >= 24 && pathname.indexOf("/magnet-maker-online.htm") == pathname.length - 24  )
+			window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
+
+		else if ( pathname == "/share/MegaMagDriveV0.8.2.zip" )	
+			window.location.replace("https://ipfs.io/ipfs/z6S3Z3W1zuLvXBZM7eaFjBSJi1BxkqH56NTaXxtsSBetcr5jxzbRN3hdJ533TuwWy1tuHSSp2NkVh2Ev2bSdRsqz1PJqbLtjgJrk/MegaMagDriveV0.8.2.zip");
+		
+		else if (pathname.indexOf("/help") == 0)
+			window.location.host = "shareaza.sourceforge.net";
+			
+		else if (pathname.indexOf("/ipfs") == 0)
+			window.location.host = "gateway.ipfs.io";
+	}
+}
 </script>
 
 <h1>page not found 404</h1>
