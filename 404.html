@@ -35,13 +35,16 @@ else
 			window.location.pathname = pathname.substr(0, pathname.length - 24) + "/magnet-converter/";
 
 		else if ( pathname == "/share/MegaMagDriveV0.8.2.zip" )	
-			window.location.replace("https://ipfs.io/ipfs/z6S3Z3W1zuLvXBZM7eaFjBSJi1BxkqH56NTaXxtsSBetcr5jxzbRN3hdJ533TuwWy1tuHSSp2NkVh2Ev2bSdRsqz1PJqbLtjgJrk/MegaMagDriveV0.8.2.zip");
+			window.location.replace("https://gateway.ipfs.io/ipfs/z6S3Z3W1zuLvXBZM7eaFjBSJi1BxkqH56NTaXxtsSBetcr5jxzbRN3hdJ533TuwWy1tuHSSp2NkVh2Ev2bSdRsqz1PJqbLtjgJrk/MegaMagDriveV0.8.2.zip");
 		
-		else if (pathname.indexOf("/help") == 0)
-			window.location.host = "shareaza.sourceforge.net";
+		else if ( pathname.indexOf("/help") == 0 )
+			window.location.replace(url.replace(window.location.protocol + "//" + window.location.host + "/help", "http://shareaza.sourceforge.net/help"));
 			
-		else if (pathname.indexOf("/ipfs") == 0)
+		else if ( pathname.indexOf("/ipfs") == 0 )
 			window.location.host = "gateway.ipfs.io";
+			
+		else if ( pathname.indexOf("/xt=urn:") >= 0 )
+			window.location.replace(url.replace("/xt=urn:", "#magnet:?xt=urn:"));
 	}
 }
 </script>
