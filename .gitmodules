@@ -19,3 +19,6 @@
 [submodule "xsl-namespace-show"]
 	path = xsl-namespace-show
 	url = https://github.com/ivan386/xsl-namespace-show.git
+[submodule "xslt-tester"]
+	path = xslt-tester
+	url = https://github.com/ivan386/xslt-tester.git
