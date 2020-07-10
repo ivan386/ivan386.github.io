@@ -22,3 +22,9 @@
 [submodule "xslt-tester"]
 	path = xslt-tester
 	url = https://github.com/ivan386/xslt-tester.git
+[submodule "ipfs-online-player"]
+	path = ipfs-online-player
+	url = https://github.com/ivan386/ipfs-online-player.git
+[submodule "xml-site-index-test"]
+	path = xml-site-index-test
+	url = https://github.com/ivan386/xml-site-index-test.git
