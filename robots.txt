@@ -1,2 +1,3 @@
 User-agent: *
 Allow: *
+Sitemap: https://ivan386.github.io/sitemap.xml
