@@ -45,6 +45,32 @@
   <url>
     <loc>https://ivan386.github.io/xml-site-index-test/with-xhtml-tags-with-default-namespaces.xhtml</loc>
   </url>
+  
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/without-xhtml-tags.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/with-prefixed-xhtml-tags.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/with-xhtml-fragment.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/with-xhtml-tags-with-default-namespaces.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/without-xhtml-tags.xhtml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/with-prefixed-xhtml-tags.xhtml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/with-xhtml-fragment.xhtml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/output-html/with-xhtml-tags-with-default-namespaces.xhtml</loc>
+  </url>
+  
   <url>
     <loc>https://ivan386.github.io/wrap/</loc>
   </url>
