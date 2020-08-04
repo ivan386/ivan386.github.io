@@ -28,3 +28,6 @@
 [submodule "xml-site-index-test"]
 	path = xml-site-index-test
 	url = https://github.com/ivan386/xml-site-index-test.git
+[submodule "xml-progressive-loading"]
+	path = xml-progressive-loading
+	url = https://github.com/ivan386/xml-progressive-loading.git
