@@ -34,6 +34,20 @@
   <url>
     <loc>https://ivan386.github.io/xml-site-index-test/with-xhtml-tags-with-default-namespaces.xml</loc>
   </url>
+  
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/doctype-html/without-xhtml-tags.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/doctype-html/with-prefixed-xhtml-tags.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/doctype-html/with-xhtml-fragment.xml</loc>
+  </url>
+  <url>
+    <loc>https://ivan386.github.io/xml-site-index-test/doctype-html/with-xhtml-tags-with-default-namespaces.xml</loc>
+  </url>  
+  
   <url>
     <loc>https://ivan386.github.io/xml-site-index-test/without-xhtml-tags.xhtml</loc>
   </url>
