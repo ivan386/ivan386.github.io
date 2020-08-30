@@ -31,3 +31,6 @@
 [submodule "xml-progressive-loading"]
 	path = xml-progressive-loading
 	url = https://github.com/ivan386/xml-progressive-loading.git
+[submodule "opensearch-demo"]
+	path = opensearch-demo
+	url = https://github.com/ivan386/opensearch-demo.git
