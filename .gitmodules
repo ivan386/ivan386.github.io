@@ -34,3 +34,6 @@
 [submodule "opensearch-demo"]
 	path = opensearch-demo
 	url = https://github.com/ivan386/opensearch-demo.git
+[submodule "js-loading-page-generator"]
+	path = js-loading-page-generator
+	url = https://github.com/ivan386/js-loading-page-generator.git
