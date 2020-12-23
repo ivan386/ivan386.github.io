@@ -37,3 +37,6 @@
 [submodule "js-loading-page-generator"]
 	path = js-loading-page-generator
 	url = https://github.com/ivan386/js-loading-page-generator.git
+[submodule "css-horizontal-blog"]
+	path = css-horizontal-blog
+	url = https://github.com/ivan386/css-horizontal-blog.git
